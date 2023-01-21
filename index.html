@@ -14,8 +14,8 @@
 </head>
 <body>
 
-    <div class="sidebar">
-        <a href="#datos" class="active"><i class="fa-solid fa-user-tie"></i> Datos Personales</a>
+    <div class="sidebar" id="sidebar">
+        <a href="#datos" class="active" id="active"><i class="fa-solid fa-user-tie"></i> Datos Personales</a>
         <a href="#info"><i class="fa-solid fa-envelope"></i> Información de Contacto</a>
         <a href="#estudios"><i class="fa-solid fa-book"></i> Formación Académica</a>
         <a href="#exp-lab"><i class="fa-solid fa-suitcase"></i> Experiencia Laboral</a>
@@ -23,10 +23,12 @@
         <a href="#informatica"><i class="fa-solid fa-laptop-code"></i> Informática</a>
     </div>
 
-
-
-    <div class="content">
+    <div class="botones">
         <button id="boton_fecha" type="button">Fecha/Hora</button>
+        <button id="dark_mode" type="button">Dark Mode</button>
+    </div>
+
+    <div class="content" id="content">
         <img class="responsive_img" src="https://randomuser.me/api/portraits/men/86.jpg" alt="Foto de Perfil">
 
         <p id="fecha"></p>
@@ -111,7 +113,7 @@
         </ul>
     </div>
 
-
+    <script src="JS/script.js"></script>
 
 </body>
 </html>

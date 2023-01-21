@@ -97,8 +97,20 @@ ul {
     border-radius: 10%;
   }
 
+  div.botones {
+    margin-left: 200px;
+    padding: 0 16px;
+    background-color: #9479A3;
+  }
+
+  button {
+    border-radius: 1mm;
+    background-color: #E8DAEF ;
+    font-weight: 600;
+  }
+
   #fecha {
     color: black;
     font-weight: bold;
-    font-size: 12;
+    font-size: 12px;
   }
