@@ -33,6 +33,7 @@ h2 {
     text-align: start;
     font-size: 18px;
     color: white;
+    transition-duration: 0.3s;
 }
 
 .sidebar a:hover {
@@ -41,12 +42,11 @@ h2 {
 }
 
 .active {
-    background-color:#4F2B4C;
-}
+    background: linear-gradient(45deg, rgb(79,43,76) 0%, rgb(66,9,79) 54%, rgb(188,159,198) 100%);}
 
 div.content {
     margin-left: 200px;
-    padding: 1px 16px 0 16px;
+    padding: 1px 16px ;
     height: 100%;
     background-color:#DAD9DE;
 }
@@ -88,6 +88,8 @@ ul {
     .sidebar {padding-top: 8px;}
     div.content {padding: 1px 2px;}
     li {text-align:left;}
+    button {font-size: 10px;}
+    div.botones {padding: 5px;}
   }
 
   .responsive_img {
@@ -95,22 +97,74 @@ ul {
     height: auto;
     float: right;
     border-radius: 10%;
+    border: 2px solid #635275;
   }
 
   div.botones {
-    margin-left: 200px;
-    padding: 0 16px;
-    background-color: #9479A3;
+    padding: 9px 16px;
+    background: linear-gradient(135deg, #9479A3 0%, #863FCB 53%, #144E75 100%);
   }
 
   button {
-    border-radius: 1mm;
-    background-color: #E8DAEF ;
+    border: none;
+    background: linear-gradient(45deg, #E8DAEF 0%, #8D54CB 31%, #635275 100%);    padding: 3px 2px;
+    text-align: center;
     font-weight: 600;
+    cursor: pointer;
+    transition-duration: 0.3s;
+    box-shadow: 3px 3px 6px 0;
+    padding: 4px;
+  }
+
+  .modo {
+    border-radius: 100%;
+  }
+
+  button:hover {
+    background-color: #4F2B4C;
+    color: white;
   }
 
   #fecha {
     color: black;
     font-weight: bold;
     font-size: 12px;
+  }
+
+  .botones .modo {
+    position: relative;
+    display: inline-block;
+  }
+
+  .botones .modo .tooltip {
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: -125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .botones .modo .tooltip::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+  } 
+
+  .botones .modo:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
   }
