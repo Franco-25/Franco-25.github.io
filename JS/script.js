@@ -18,3 +18,19 @@
         parrafo.style.color = "white";
         parrafo.style.fontWeight = "normal";
     })
+
+            // Modo Claro
+    document.getElementById("light_mode").addEventListener("click", function lightMode() {
+        document.body.style.backgroundColor = "white";
+        document.getElementById("content").style.backgroundColor = "#DAD9DE";
+        document.getElementById("sidebar").style.backgroundColor = "#9FBCC6";
+        
+        const collection = document.getElementsByTagName("ul");
+        for (let i = 0; i < collection.length; i++) {
+            collection[i].style.backgroundColor = "#F4F4F4";
+        }
+
+        const parrafo = document.getElementById("fecha");
+        parrafo.style.color = "black";
+        parrafo.style.fontWeight = "bold";
+    })
