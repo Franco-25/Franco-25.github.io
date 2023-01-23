@@ -42,7 +42,8 @@ h2 {
 }
 
 .active {
-    background: linear-gradient(45deg, rgb(79,43,76) 0%, rgb(66,9,79) 54%, rgb(188,159,198) 100%);}
+    background: linear-gradient(45deg, rgb(79,43,76) 0%, rgb(66,9,79) 54%, rgb(188,159,198) 100%);
+  }
 
 div.content {
     margin-left: 200px;
@@ -98,16 +99,19 @@ ul {
     float: right;
     border-radius: 10%;
     border: 2px solid #635275;
+    box-shadow: 5px 5px 17px 1px #000000;
   }
 
   div.botones {
     padding: 9px 16px;
     background: linear-gradient(135deg, #9479A3 0%, #863FCB 53%, #144E75 100%);
+    box-shadow: 5px 5px 17px 1px #000000;
   }
 
   button {
     border: none;
-    background: linear-gradient(45deg, #E8DAEF 0%, #8D54CB 31%, #635275 100%);    padding: 3px 2px;
+    background: linear-gradient(45deg, #E8DAEF 0%, #8D54CB 31%, #635275 100%);    
+    padding: 3px 2px;
     text-align: center;
     font-weight: 600;
     cursor: pointer;
@@ -131,14 +135,14 @@ ul {
     font-size: 12px;
   }
 
-  .botones .modo {
+  .modo {
     position: relative;
     display: inline-block;
   }
 
-  .botones .modo .tooltip {
+  .modo .tooltip, .tooltip_2 {
     visibility: hidden;
-    width: 120px;
+    width: 80px;
     background-color: #555;
     color: #fff;
     text-align: center;
@@ -148,23 +152,28 @@ ul {
     z-index: 1;
     bottom: -125%;
     left: 50%;
-    margin-left: -60px;
+    margin-left: -40px;
     opacity: 0;
     transition: opacity 0.3s;
   }
 
-  .botones .modo .tooltip::after {
+  .modo .tooltip::after, .tooltip_2::after {
     content: "";
     position: absolute;
-    top: 100%;
+    bottom: 100%;
     left: 50%;
     margin-left: -5px;
     border-width: 5px;
     border-style: solid;
-    border-color: #555 transparent transparent transparent;
+    border-color: transparent transparent #555 transparent;
   } 
 
-  .botones .modo:hover .tooltip {
+  .modo:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .modo:hover .tooltip_2 {
     visibility: visible;
     opacity: 1;
   }
