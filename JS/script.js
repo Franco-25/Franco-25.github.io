@@ -1,4 +1,5 @@
 
+    // Mostrar fecha y hora de hoy
     document.getElementById("boton_fecha").onmouseover = function fecha() {
         document.getElementById("fecha").innerHTML = Date();
     }
@@ -19,7 +20,7 @@
         parrafo.style.fontWeight = "normal";
     })
 
-        // Modo Claro
+    // Modo Claro
     document.getElementById("light_mode").addEventListener("click", function lightMode() {
         document.body.style.backgroundColor = "white";
         document.getElementById("content").style.backgroundColor = "#DAD9DE";
@@ -35,7 +36,7 @@
         parrafo.style.fontWeight = "bold";
     })
 
-        // Ir arriba de la página
+    // Ir arriba de la página
     let botonArriba = document.getElementById("arriba");
     window.onscroll = function() {scroll()};
 
