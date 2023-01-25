@@ -19,7 +19,7 @@
         parrafo.style.fontWeight = "normal";
     })
 
-            // Modo Claro
+        // Modo Claro
     document.getElementById("light_mode").addEventListener("click", function lightMode() {
         document.body.style.backgroundColor = "white";
         document.getElementById("content").style.backgroundColor = "#DAD9DE";
@@ -34,3 +34,20 @@
         parrafo.style.color = "black";
         parrafo.style.fontWeight = "bold";
     })
+
+        // Ir arriba de la página
+    let botonArriba = document.getElementById("arriba");
+    window.onscroll = function() {scroll()};
+
+    function scroll() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            botonArriba.style.display = "block";
+        } else {
+            botonArriba.style.display = "none";
+        }
+    }
+
+    function irArriba() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
