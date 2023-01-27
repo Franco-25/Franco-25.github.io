@@ -5,6 +5,7 @@
 
 html {
    scroll-behavior: smooth;
+   scrollbar-shadow-color: #000000;
 }
 
 body {
@@ -72,6 +73,25 @@ ul {
    font-size: 18px;
  }
 
+ @media screen and (max-width: 800px) {
+  .sidebar a {float: left;}
+  .sidebar a:hover {scale: 0.93;}
+  .modo:hover .tooltip {display: none;}
+  .modo:hover .tooltip_2 {display: none;}
+  button:active {
+    background-color: black;
+    color: white;
+  }
+  .sidebar a:active {
+    background: linear-gradient(to top right, #660066 0%, #33ccff 100%); 
+    transition-duration: 3000s;   
+  }
+  #arriba:active {
+    background-color: black;
+    color: white;
+  }
+ }
+
 @media screen and (max-width: 700px) {
     .sidebar {
       width: 100%;
@@ -81,16 +101,6 @@ ul {
     .sidebar a {float: left;}
     .sidebar a:hover {scale: 0.93;}
     .content {margin-left: 0;}
-    .modo:hover .tooltip {display: none;}
-    .modo:hover .tooltip_2 {display: none;}
-    button:active {
-      background-color: black;
-      color: white;
-    }
-    .sidebar a:active {
-      background: linear-gradient(to top right, #660066 0%, #33ccff 100%);    
-    }
-
   }
 
   @media screen and (max-width: 400px) {
@@ -100,13 +110,6 @@ ul {
       font-size: 16px;
       padding: 5px;
     }
-    .sidebar a:active {
-      background: linear-gradient(to top right, #660066 0%, #33ccff 100%);    
-    }
-    button:active {
-      background-color: black;
-      color: white;
-    }
     h2 {font-size: 30px;}
     h3 {font-size: 18px;}
     .sidebar {padding-top: 8px;}
@@ -114,8 +117,6 @@ ul {
     li {text-align:left;}
     button {font-size: 10px;}
     .botones {padding: 5px;}
-    .modo:hover .tooltip {display: none;}
-    .modo:hover .tooltip_2 {display: none;}
   }
 
   .responsive_img {
@@ -160,6 +161,10 @@ ul {
     background-color: black;
     color: white;
   }
+    #arriba:hover {
+    color: white;
+    background-color: black;
+  }
   }
 
   #fecha {
@@ -182,11 +187,6 @@ ul {
     cursor: pointer;
     padding: 10px;
     opacity: 0.7;
-  }
-
-  #arriba:hover {
-    color: white;
-    background-color: black;
   }
 
   .modo {
