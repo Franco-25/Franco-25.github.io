@@ -24,11 +24,17 @@ h2 {
     height: 100%;
     width: 200px;
     position: fixed;
-    background-color: #9FBCC6;
     overflow: none;
     display: inline-flex;
     flex-direction: column;
 }
+
+.side_bgcolor {
+  background: linear-gradient(to bottom right, #9fbcc6 39%, #9900ff 100%);
+}
+
+.side_bgcolorDark {
+  background: linear-gradient(to top left, #2c3e50 0%, #808b96 100%);}
 
 .sidebar a {
     padding: 10px;
@@ -41,20 +47,30 @@ h2 {
 
 @media (any-hover: hover) {
 .sidebar a:hover {
-  background: linear-gradient(to top right, #660066 0%, #33ccff 100%);    
+  background: linear-gradient(to right, #9999ff 28%, #6600cc 67%);
   transform: scale(1.03);
 }
 }
 .active {
-    background: linear-gradient(45deg, rgb(79,43,76) 0%, rgb(66,9,79) 54%, rgb(188,159,198) 100%);
-  }
+  background: linear-gradient(to top right, #6666ff 25%, #660066 100%);
+}
+
+.activeDark {
+    background: linear-gradient(to bottom left, #000000 5%, #6600cc 100%);
+}
 
 .content {
     margin-left: 200px;
     padding: 1px 16px ;
     height: 100%;
-    background-color:#DAD9DE;
 }
+
+.cont_bgcolor {
+  background: linear-gradient(to right, #ccccff 0%, #ccffff 100%);
+}
+
+.cont_bgcolorDark {
+  background: linear-gradient(to right, #669999 36%, #000000 100%);}
 
 li {
    text-align: justify;
@@ -66,11 +82,18 @@ span {
 }
 
 ul {
-   background: #F4F4F4;
    padding: 20px;
    line-height: 30px;
    border-radius:5mm;
    font-size: 18px;
+ }
+
+ .ul_bgcolor {
+  background: linear-gradient(to top right, #f4f4f4 17%, #9900cc 100%);
+ }
+
+ .ul_bgcolorDark {
+  background: linear-gradient(to top right, #ccccff 0%, #808b96 52%);
  }
 
  @media screen and (max-width: 800px) {
@@ -231,3 +254,7 @@ ul {
     visibility: visible;
     opacity: 1;
   }
+
+  .color {
+    background: linear-gradient(to right, #3399ff 0%, #660066 100%);
+ }
