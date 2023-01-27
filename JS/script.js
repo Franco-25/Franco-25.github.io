@@ -7,12 +7,17 @@
     // Modo Oscuro
     document.getElementById("dark_mode").addEventListener("click", function darkMode() {
         document.body.style.backgroundColor = "#212F3D";
-        document.getElementById("content").style.backgroundColor = "#566573";
-        document.getElementById("sidebar").style.backgroundColor = "#2C3E50";
+        document.getElementById("content").classList.remove("cont_bgcolor");
+        document.getElementById("content").classList.add("cont_bgcolorDark");
+        document.getElementById("sidebar").classList.remove("side_bgcolor");
+        document.getElementById("sidebar").classList.add("side_bgcolorDark");
+        document.getElementById("active").classList.remove("active");
+        document.getElementById("active").classList.add("activeDark");
         
         const collection = document.getElementsByTagName("ul");
         for (let i = 0; i < collection.length; i++) {
-            collection[i].style.backgroundColor = "#808B96";
+            collection[i].classList.remove("ul_bgcolor");
+            collection[i].classList.add("ul_bgcolorDark");
         }
 
         const parrafo = document.getElementById("fecha");
@@ -23,12 +28,17 @@
     // Modo Claro
     document.getElementById("light_mode").addEventListener("click", function lightMode() {
         document.body.style.backgroundColor = "white";
-        document.getElementById("content").style.backgroundColor = "#DAD9DE";
-        document.getElementById("sidebar").style.backgroundColor = "#9FBCC6";
+        document.getElementById("content").classList.remove("cont_bgcolorDark");
+        document.getElementById("content").classList.add("cont_bgcolor");
+        document.getElementById("sidebar").classList.remove("side_bgcolorDark");
+        document.getElementById("sidebar").classList.add("side_bgcolor");
+        document.getElementById("active").classList.remove("activeDark");
+        document.getElementById("active").classList.add("active");
         
         const collection = document.getElementsByTagName("ul");
         for (let i = 0; i < collection.length; i++) {
-            collection[i].style.backgroundColor = "#F4F4F4";
+            collection[i].classList.remove("ul_bgcolorDark");
+            collection[i].classList.add("ul_bgcolor");
         }
 
         const parrafo = document.getElementById("fecha");
