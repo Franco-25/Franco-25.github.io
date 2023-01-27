@@ -24,7 +24,7 @@ h2 {
     width: 200px;
     position: fixed;
     background-color: #9FBCC6;
-    overflow: auto;
+    overflow: none;
     display: inline-flex;
     flex-direction: column;
 }
@@ -38,11 +38,12 @@ h2 {
     transition-duration: 0.3s;
 }
 
+@media (any-hover: hover) {
 .sidebar a:hover {
   background: linear-gradient(to top right, #660066 0%, #33ccff 100%);    
-  transform: scale(1.1);
+  transform: scale(1.03);
 }
-
+}
 .active {
     background: linear-gradient(45deg, rgb(79,43,76) 0%, rgb(66,9,79) 54%, rgb(188,159,198) 100%);
   }
@@ -80,6 +81,16 @@ ul {
     .sidebar a {float: left;}
     .sidebar a:hover {scale: 0.93;}
     .content {margin-left: 0;}
+    .modo:hover .tooltip {display: none;}
+    .modo:hover .tooltip_2 {display: none;}
+    button:active {
+      background-color: black;
+      color: white;
+    }
+    .sidebar a:active {
+      background: linear-gradient(to top right, #660066 0%, #33ccff 100%);    
+    }
+
   }
 
   @media screen and (max-width: 400px) {
@@ -89,7 +100,13 @@ ul {
       font-size: 16px;
       padding: 5px;
     }
-    .sidebar a:hover {scale: 0.93}
+    .sidebar a:active {
+      background: linear-gradient(to top right, #660066 0%, #33ccff 100%);    
+    }
+    button:active {
+      background-color: black;
+      color: white;
+    }
     h2 {font-size: 30px;}
     h3 {font-size: 18px;}
     .sidebar {padding-top: 8px;}
@@ -97,6 +114,8 @@ ul {
     li {text-align:left;}
     button {font-size: 10px;}
     .botones {padding: 5px;}
+    .modo:hover .tooltip {display: none;}
+    .modo:hover .tooltip_2 {display: none;}
   }
 
   .responsive_img {
@@ -136,9 +155,11 @@ ul {
     border-radius: 100%;
   }
 
+  @media (any-hover: hover) {
   button:hover {
     background-color: black;
     color: white;
+  }
   }
 
   #fecha {
