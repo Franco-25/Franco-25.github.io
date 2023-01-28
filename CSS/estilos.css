@@ -5,12 +5,12 @@
 
 html {
    scroll-behavior: smooth;
-   scrollbar-shadow-color: #000000;
 }
 
 body {
     font-family: 'Rubik', sans-serif;
     position: relative;
+    margin: 0;
 }
 
 h2 {
@@ -96,7 +96,7 @@ ul {
   background: linear-gradient(to top right, #ccccff 0%, #808b96 52%);
  }
 
- @media screen and (max-width: 800px) {
+ @media screen and (max-width: 800px), (orientation: landscape) and (max-height: 500px) {
   .sidebar a {float: left;}
   .sidebar a:hover {scale: 0.93;}
   .modo:hover .tooltip {display: none;}
