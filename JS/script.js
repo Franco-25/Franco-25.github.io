@@ -6,7 +6,6 @@
 
     // Modo Oscuro
     document.getElementById("dark_mode").addEventListener("click", function darkMode() {
-        document.body.style.backgroundColor = "#212F3D";
         document.getElementById("content").classList.remove("cont_bgcolor");
         document.getElementById("content").classList.add("cont_bgcolorDark");
         document.getElementById("sidebar").classList.remove("side_bgcolor");
@@ -27,7 +26,6 @@
 
     // Modo Claro
     document.getElementById("light_mode").addEventListener("click", function lightMode() {
-        document.body.style.backgroundColor = "white";
         document.getElementById("content").classList.remove("cont_bgcolorDark");
         document.getElementById("content").classList.add("cont_bgcolor");
         document.getElementById("sidebar").classList.remove("side_bgcolorDark");
@@ -57,7 +55,6 @@
             botonArriba.style.display = "none";
         }
     }
-
     function irArriba() {
         document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;
